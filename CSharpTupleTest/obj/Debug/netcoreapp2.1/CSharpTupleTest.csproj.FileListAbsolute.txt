@@ -1,0 +1,14 @@
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.csprojAssemblyReference.cache
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.csproj.CoreCompileInputs.cache
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.AssemblyInfoInputs.cache
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.AssemblyInfo.cs
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/xunit.runner.reporters.netcoreapp10.dll
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/xunit.runner.utility.netcoreapp10.dll
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/CSharpTupleTest.deps.json
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/CSharpTupleTest.runtimeconfig.json
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/CSharpTupleTest.runtimeconfig.dev.json
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/CSharpTupleTest.dll
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/bin/Debug/netcoreapp2.1/CSharpTupleTest.pdb
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.dll
+/Users/belmer/RiderProjects/CSharpTupleTest/CSharpTupleTest/obj/Debug/netcoreapp2.1/CSharpTupleTest.pdb
