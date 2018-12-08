@@ -3,10 +3,10 @@ using Xunit;
 
 namespace CSharpTupleTest
 {
-    public class UnitTest1
+    public class TupleTests
     {
         [Fact]
-        public void Test1()
+        public void tuple_test()
         {
             var tupleManager = new TupleManager();
             var tupleService = tupleManager.TupleService();
