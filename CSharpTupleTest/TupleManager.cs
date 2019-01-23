@@ -11,6 +11,6 @@ namespace CSharpTupleTest
                 (x:1, y:"2"));
 
         public GetTuple TupleService =>
-            () => tuple.Value;
+            () => this.tuple.Value;
     }
 }
