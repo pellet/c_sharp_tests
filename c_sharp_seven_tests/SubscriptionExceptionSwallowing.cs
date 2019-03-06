@@ -48,5 +48,26 @@ namespace CSharpTupleTest
             }
             Assert.Null(actualException);
         }
+        
+        [Fact]
+        void exception_not_swallowed_when_finally_handler_in_subscription()
+        {
+            var o =
+                Observable
+                    .Return(Unit.Default);
+            Exception actualException = null;
+            try
+            {
+                o
+                    .Do(_ => throw new Exception())
+                    .Finally(() => {})
+                    .Subscribe();
+            }
+            catch (Exception e)
+            {
+                actualException = e;
+            }
+            Assert.NotNull(actualException);
+        }
     }
 }
