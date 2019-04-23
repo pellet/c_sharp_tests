@@ -25,7 +25,7 @@ namespace CSharpTupleTest
             repeatMe
                 .TakeWhile(j => i < j)
                 .Subscribe();
-            
+            Assert.Equal(expected: 2, actual: i);
         }
     }
 }
