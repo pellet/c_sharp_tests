@@ -32,55 +32,37 @@ namespace CSharpTupleTest
         
         
         [Fact]
-        void repeat_async_in_order()
+        void repeat_delayed_observable_result_in_order()
         {
             var scheduler = new TestScheduler();
 
             var delay = 5;
-            var delayedAsync =
-                Observable
-                    .Defer(
-                        () =>
-                        {
-                            var observable =
-                                Observable
-                                    .Timer(TimeSpan.FromSeconds(delay), scheduler);
-                            delay--;
-                            return observable;
-                        })
-                    .ToTask();
             long? actual = null;
-            var repeatMe =
-                Observable
-                    .FromAsync(
+            
+            Observable
+                .Defer(
                     () =>
-                    {
-                        return delayedAsync;
-                    })
-                    .Scan((x, y) =>
-                    {
-                        return x + y;
-                    })
-                    .Do(j =>
-                    {
-                        this.outputHelper.WriteLine(j.ToString());
-                        actual = j;
-                    })
-                    .Repeat();
-            repeatMe
+                        Observable
+                            .Timer(TimeSpan.FromSeconds(delay), scheduler))
+                .Select(_ =>
+                {
+                    return delay;
+                })
+                .Do(_ => delay--)
+                .FirstOrDefaultAsync()
+                .Do(j =>
+                {
+                    this.outputHelper.WriteLine(j.ToString());
+                    actual = j;
+                })
+                .Repeat()
                 .TakeWhile(i =>
                 {
                     return 0 < i;
                 })
-                .Finally(
-                    () =>
-                    {
-                        
-                    })
                 .Subscribe();
             scheduler.AdvanceBy(TimeSpan.FromMinutes(1).Ticks);
-            scheduler.AdvanceBy(TimeSpan.FromMinutes(1).Ticks);
-            Assert.Equal(expected: 2, actual: actual);
+            Assert.Equal(expected: 0, actual: actual);
         }
     }
 }
