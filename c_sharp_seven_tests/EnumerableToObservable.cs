@@ -27,7 +27,10 @@ namespace CSharpTupleTest
             var last = await
                 Observable
                     .Return(1)
-                    .SelectMany(_ => b)
+                    .Concat(Observable.Never<int>())
+                    .Select(_ => b.ToObservable())
+                    .FirstOrDefaultAsync()
+                    .Switch()
                     .LastOrDefaultAsync();
             Assert.False(last);
         }
