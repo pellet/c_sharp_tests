@@ -13,7 +13,7 @@ namespace CSharpTupleTest
     public class ScheduledAsyncTaskTests
     {
         [Fact]
-        public async Task test()
+        public void test()
         {
             var scheduler = new TestScheduler();
             var reader = new Reader();

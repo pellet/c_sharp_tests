@@ -8,18 +8,22 @@ namespace CSharpTupleTest
     public class Scan
     {
         [Fact]
-        void iterative_loop_using_scan()
+        void scan()
         {
+            int? result = null;
             Observable
-                .Start(() => 0)
+                .Range(0, 4)
                 .Scan((x, y) =>
                 {
-                    return x + 1;
+                    return x + y;
                 })
-                .Repeat()
-                .TakeWhile(index => index < 3)
+                .Do(res =>
+                {
+                    result = res;
+                })
+                .Repeat(2)
                 .Subscribe();
-            
+            Assert.Equal(expected: 3, actual: result);
         }
     }
 }
