@@ -25,7 +25,7 @@ namespace c_sharp_eight_tests
         public CompositeDisposableTests(ITestOutputHelper outputHelper) => 
             this.outputHelper = outputHelper;
 
-        class TestClass
+        class TestClass : IDisposable
         {
             readonly ITestOutputHelper outputHelper;
             CompositeDisposable disposables = new CompositeDisposable();
@@ -48,6 +48,11 @@ namespace c_sharp_eight_tests
             ~TestClass()
             {
                 this.outputHelper.WriteLine("Dealloced Class.");
+                //this.disposables.Dispose();
+            }
+
+            public void Dispose()
+            {
                 this.disposables.Dispose();
             }
         }
